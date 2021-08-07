@@ -120,9 +120,15 @@ Resources:
           - Effect: Allow
             Action:
               - 's3:PutObject'
+              - 's3:GetObject'
             Resource:
-              - !Sub "arn:aws:s3:::lambdas-zips-${AWS::Region}-*"
-              - !Sub "arn:aws:s3:::lambdas-zips-${AWS::Region}-*/*"
+              - !Sub "arn:aws:s3:::curso-aws-cero-uno-lambdas-c1b4ck3-*"
+              - !Sub "arn:aws:s3:::curso-aws-cero-uno-lambdas-c1b4ck3-*/*"
+          - Effect: Allow
+            Action: 
+              - 'cloudformation:CreateChangeSet'
+            Resource:
+              - !Sub 'arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/*'
           - Effect: Allow
             Action:
               - 's3:GetObject'
