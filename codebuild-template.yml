@@ -68,7 +68,7 @@ Resources:
         CloudWatchLogs:
           Status: ENABLED
           GroupName: lambda-deploy-log
-      ConcurrentBuildLimit: 3
+      ConcurrentBuildLimit: 1
       SourceVersion: master
 #      Triggers: 
 #        Webhook: true
