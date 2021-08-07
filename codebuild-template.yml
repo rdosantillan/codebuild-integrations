@@ -88,7 +88,7 @@ Resources:
           Principal:
             Service: codebuild.amazonaws.com
       Path: /
-      RoleName: !Sub "codebuild-${CodeBuildType}-role"
+      RoleName: !Sub "codebuild-${Env}-${CodeBuildType}-role"
   
 #  RootInstanceProfile:
 #    Type: AWS::IAM::InstanceProfile
