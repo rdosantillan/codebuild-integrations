@@ -4,7 +4,7 @@ env:
   variables:
     build_version: "0.1"
     service: "helloworld"
-    BucketZips: "lambdas-zips-us-east-1-wk3v4d"
+    BucketZips: "curso-aws-cero-uno-lambdas-c1b4ck3"
 
 phases:
   install:
