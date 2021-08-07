@@ -14,3 +14,14 @@ aws cloudformation deploy --template-file codebuild-template.yml \
     SecondaryLocation=https://github.com/rdosantillan/lambdas \
     --tags Env=Dev Course=DevOps \
     --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
+
+aws cloudformation deploy --template-file codebuild-template.yml \
+    --stack-name dev-deploy-helloworld \
+    --parameter-overrides \
+    Env=dev \
+    BuildSpec=lambda-deploy/sam-deploy-buildspec.yml \
+    CodeBuildType=lambda-deploy \
+    Location=https://github.com/rdosantillan/codebuild-integrations \
+    SecondaryLocation=https://github.com/rdosantillan/lambdas \
+    --tags Env=Dev Course=DevOps \
+    --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM
